@@ -1,0 +1,84 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: rgb(51, 51, 51);
+    background-color: rgb(255, 255, 255);
+}
+
+.container {
+    max-width: 1500px;
+    border: 0px solid #222;
+    margin: 0px auto;
+}
+
+.header {
+    &__body {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    &__logo {
+    }
+
+    &__input {
+        padding: 30px;
+    }
+
+    &__inputtext {
+        background-color: white;
+        color: black;
+        font-size: 24px;
+        border-radius: 4px;
+        border: 3px solid rgb(169, 169, 169);
+        padding: 5px;
+        text-align: center;
+    }
+
+    &__inputbtn {
+        background-color: white;
+        color: black;
+        font-size: 24px;
+        border-radius: 4px;
+        border: 3px solid rgb(169, 169, 169);
+        padding: 5px;
+        text-align: center;
+    }
+
+    &__showschedule {
+    }
+}
+
+.schedule {
+    &__body {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 30px;
+    }
+
+    &__day {
+        width: 100%;
+        margin: 0px 10px 0px 10px;
+        //min-width: 11%;
+    }
+
+    &__title {
+        background-color: grey;
+        color: white;
+        text-align: center;
+    }
+
+    &__blocks {
+        border: grey 2px solid;
+    }
+}
