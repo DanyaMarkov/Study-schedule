@@ -27,6 +27,7 @@ body {
     }
 
     &__logo {
+        font-size: 1em;
     }
 
     &__input {
@@ -54,13 +55,14 @@ body {
     }
 
     &__showschedule {
+        font-size: 22px;
     }
 }
 
 .schedule {
     &__body {
         display: flex;
-        align-items: center;
+        //align-items: center;
         flex-direction: row;
         justify-content: space-between;
         margin-top: 30px;
@@ -68,6 +70,7 @@ body {
 
     &__day {
         width: 100%;
+
         margin: 0px 10px 0px 10px;
         //min-width: 11%;
     }
@@ -79,6 +82,32 @@ body {
     }
 
     &__blocks {
-        border: grey 2px solid;
+        height: 100%;
+        font-size: 14px;
+        border: rgb(124, 124, 124) 1px solid;
+        margin-bottom: 5px;
     }
+}
+
+.scheduleBlock {
+    border-top: rgb(124, 124, 124) 1px solid;
+}
+#time {
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+#cabinet {
+    color: blue;
+}
+#lesson {
+    font-weight: bold;
+    font-size: 18px;
+}
+#teacher {
+    font-style: italic;
+    font-size: 1em;
+}
+#dates {
+    font-size: 1em;
 }

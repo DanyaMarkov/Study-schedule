@@ -34,6 +34,10 @@ body {
           justify-content: space-between;
 }
 
+.header__logo {
+  font-size: 1em;
+}
+
 .header__input {
   padding: 30px;
 }
@@ -58,13 +62,14 @@ body {
   text-align: center;
 }
 
+.header__showschedule {
+  font-size: 22px;
+}
+
 .schedule__body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -87,6 +92,37 @@ body {
 }
 
 .schedule__blocks {
-  border: grey 2px solid;
+  height: 100%;
+  font-size: 14px;
+  border: #7c7c7c 1px solid;
+  margin-bottom: 5px;
+}
+
+.scheduleBlock {
+  border-top: #7c7c7c 1px solid;
+}
+
+#time {
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+#cabinet {
+  color: blue;
+}
+
+#lesson {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+#teacher {
+  font-style: italic;
+  font-size: 1em;
+}
+
+#dates {
+  font-size: 1em;
 }
 /*# sourceMappingURL=style.css.map */
