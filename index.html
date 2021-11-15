@@ -20,9 +20,10 @@
 
             <div class="header__input">
                 <form action="">
-                    <input class="header__inputtext" value="181-361" type="text" name="" id="">
-                    <button class="header__inputbtn" onclick="showSchedule()"> Показать расписание </button>
-                    <a href="#" onclick="showSchedule()">da</a>
+                    Для вывода расписания укажите в строке поиска номер учебной группы:
+                    <input class="header__inputtext" onchange="showSchedule(); Storage();" value="" type="text" name="" id="">
+                    <!-- <button class="header__inputbtn" onclick="showSchedule()"> Показать расписание </button> -->
+                    <!-- <a href="#" onclick="showSchedule()">Показать расписание</a> -->
                 </form>
             </div>
 

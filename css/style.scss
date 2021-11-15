@@ -86,28 +86,32 @@ body {
         font-size: 14px;
         border: rgb(124, 124, 124) 1px solid;
         margin-bottom: 5px;
+        padding: 0px 4px 0px 4px;
     }
 }
 
 .scheduleBlock {
     border-top: rgb(124, 124, 124) 1px solid;
+    width: 100%;
 }
 #time {
     text-align: center;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 16px;
 }
 #cabinet {
     color: blue;
 }
 #lesson {
     font-weight: bold;
-    font-size: 18px;
+    font-size: 14px;
 }
 #teacher {
     font-style: italic;
     font-size: 1em;
 }
 #dates {
-    font-size: 1em;
+    font-size: 0.9em;
+    color: rgb(138, 138, 138);
+    text-align: center;
 }

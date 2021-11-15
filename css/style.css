@@ -96,16 +96,18 @@ body {
   font-size: 14px;
   border: #7c7c7c 1px solid;
   margin-bottom: 5px;
+  padding: 0px 4px 0px 4px;
 }
 
 .scheduleBlock {
   border-top: #7c7c7c 1px solid;
+  width: 100%;
 }
 
 #time {
   text-align: center;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 #cabinet {
@@ -114,7 +116,7 @@ body {
 
 #lesson {
   font-weight: bold;
-  font-size: 18px;
+  font-size: 14px;
 }
 
 #teacher {
@@ -123,6 +125,8 @@ body {
 }
 
 #dates {
-  font-size: 1em;
+  font-size: 0.9em;
+  color: #8a8a8a;
+  text-align: center;
 }
 /*# sourceMappingURL=style.css.map */
