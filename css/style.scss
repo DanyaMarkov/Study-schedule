@@ -4,18 +4,18 @@
     border: 0;
 }
 
+.container {
+    max-width: 1500px;
+    border: 0px solid #222;
+    margin: 0px auto;
+}
+
 body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 14px;
     line-height: 1.42857143;
     color: rgb(51, 51, 51);
     background-color: rgb(255, 255, 255);
-}
-
-.container {
-    max-width: 1500px;
-    border: 0px solid #222;
-    margin: 0px auto;
 }
 
 .header {
@@ -32,6 +32,8 @@ body {
 
     &__input {
         padding: 10px;
+        display: flex;
+        align-items: center;
     }
 
     &__inputtext {
@@ -211,4 +213,73 @@ body {
     font-size: 0.9em;
     color: rgb(138, 138, 138);
     text-align: center;
+}
+
+@media (max-width: 1000px) {
+    body {
+        font-size: 18px;
+    }
+
+    .container {
+        max-width: 650px;
+        border: 0px solid #222;
+        margin: 0px auto;
+    }
+
+    .header {
+        &__body {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            //justify-content: space-between;
+        }
+        &__input {
+            flex-direction: column;
+        }
+    }
+    .schedule {
+        &__body {
+            display: flex;
+            //align-items: center;
+            flex-direction: column;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+
+        &__day {
+            width: 100%;
+
+            margin: 0px 10px 30px 10px;
+            //min-width: 11%;
+        }
+    }
+}
+
+@media (max-width: 760px) {
+    body {
+        font-size: 20px;
+    }
+
+    .container {
+        max-width: 450px;
+        border: 0px solid #222;
+        margin: 0px auto;
+    }
+
+    .schedule {
+        &__body {
+            display: flex;
+            //align-items: center;
+            flex-direction: column;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+
+        &__day {
+            width: 100%;
+
+            margin: 0px 10px 30px 10px;
+            //min-width: 11%;
+        }
+    }
 }

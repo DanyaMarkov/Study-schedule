@@ -10,7 +10,7 @@ window.onload = function () {
 
 function Storage() {
     var currentValue = document.querySelector('.header__inputtext').value;
-    console.log(currentValue)
+    //console.log(currentValue)
     if (currentValue == "") {
     }
     else {
@@ -20,6 +20,9 @@ function Storage() {
     }
 }
 
+document.querySelector('.groups__title').onclick = function () {
+    showAllGroups();
+}
 function showAllGroups() {
 
     if (document.querySelector('.groups__list').className == 'groups__list disableList') {
@@ -37,8 +40,18 @@ function fillListOfGroups() {
         .then((response) => response.json())
         .then((data) => {
             for (let i in data) {
-                document.querySelector('.groups__list').innerHTML += "<div class='list_el' onclick='inputGroup()'>" + data[i].groupNumber + "</div>";
+                document.querySelector('.groups__list').innerHTML += "<div class='list_el'>" + data[i].groupNumber + "</div>";
+                //document.querySelector('.list_el').addEventListener('click', inputGroup);
+                console.log("В списке групп " + data[i].groupNumber)
             }
+
+            var items = document.getElementsByClassName("list_el");
+            for (var i = 0; i < items.length; i++) {
+                console.log("Добавил")
+                items[i].addEventListener("click", inputGroup);
+            }
+
+
         })
         .catch((error) => {
             console.log(error);
@@ -46,18 +59,27 @@ function fillListOfGroups() {
 }
 
 
+//document.querySelector('.list_el').onclick = addEventListener('click', inputGroup);
 
 function inputGroup() {
+    //let group = document.querySelector('.list_el').innerHTML;
 
-    let group = document.querySelector('.list_el').innerHTML
-    document.querySelector('.header__inputtext').value = group;
-
+    let inputGroup = this.innerHTML;
+    document.querySelector('.header__inputtext').value = inputGroup;
+    //console.log(this);
     showSchedule();
     //console.log(group);
 }
 
+document.querySelector('.header__inputtext').addEventListener('click', showSchedule);
+document.querySelector('.header__inputtext').addEventListener('click', Storage);
+// document.querySelector('.header__inputtext').onchange = function () {
+//     showSchedule();
+//     Storage();
+// }
 
 function showSchedule() {
+    Storage();
     fetch("base.json")
         .then((response) => response.json())
         .then((data) => {
