@@ -4,6 +4,7 @@ window.onload = function () {
     document.querySelector('.header__inputtext').value = input;
     console.log("Загрузил значение в инпут:" + input)
 
+    fillListOfGroups();
     showSchedule();
 };
 
@@ -19,6 +20,43 @@ function Storage() {
     }
 }
 
+function showAllGroups() {
+
+    if (document.querySelector('.groups__list').className == 'groups__list disableList') {
+        document.querySelector('.groups__list').className = 'groups__list'
+        //document.querySelector('.groups__list').innerHTML = "";
+    }
+    else {
+        document.querySelector('.groups__list').className = 'groups__list disableList';
+    }
+
+}
+
+function fillListOfGroups() {
+    fetch("base.json")
+        .then((response) => response.json())
+        .then((data) => {
+            for (let i in data) {
+                document.querySelector('.groups__list').innerHTML += "<div class='list_el' onclick='inputGroup()'>" + data[i].groupNumber + "</div>";
+            }
+        })
+        .catch((error) => {
+            console.log(error);
+        });
+}
+
+
+
+function inputGroup() {
+
+    let group = document.querySelector('.list_el').innerHTML
+    document.querySelector('.header__inputtext').value = group;
+
+    showSchedule();
+    //console.log(group);
+}
+
+
 function showSchedule() {
     fetch("base.json")
         .then((response) => response.json())
@@ -26,7 +64,7 @@ function showSchedule() {
 
             clearDays();
 
-            console.log(data);
+            //console.log(data);
             let val = document.querySelector('.header__inputtext').value;
 
             let findgroup = false;
@@ -41,7 +79,7 @@ function showSchedule() {
                             continue;
                         }
                         for (let k in data[i][currentDay].lessons) {
-                            console.log(typeof (data[i][currentDay]))
+                            //console.log(typeof (data[i][currentDay]))
                             let block = "<div id='time'>" + data[i][currentDay].lessons[k].time + "</div>"
                                 + "<div id='cabinet'>" + data[i][currentDay].lessons[k].cabinet + "</div>"
                                 + "<div id='lesson'>" + data[i][currentDay].lessons[k].lesson + "</div>"
@@ -64,7 +102,7 @@ function showSchedule() {
 
             }
             if (findgroup == false) {
-                alert("Нет такой группы!");
+                //alert("Нет такой группы!");
             }
         })
         .catch((error) => {

@@ -31,7 +31,7 @@ body {
     }
 
     &__input {
-        padding: 30px;
+        padding: 10px;
     }
 
     &__inputtext {
@@ -54,9 +54,106 @@ body {
         text-align: center;
     }
 
-    &__showschedule {
-        font-size: 22px;
+    &__showAllGroups {
+        span {
+            background: rgb(64, 199, 129);
+            box-shadow: 0 -3px rgb(53, 167, 110) inset;
+        }
+
+        span:hover {
+            background: rgb(53, 167, 110);
+        }
+        span:active {
+            background: rgb(33, 147, 90);
+            box-shadow: 0 3px rgb(33, 147, 90) inset;
+        }
     }
+
+    &__editSchedule {
+        span {
+            background: rgb(98, 111, 226);
+            box-shadow: 0 -3px rgb(173, 169, 230) inset;
+        }
+
+        span:hover {
+            background: rgb(173, 169, 230);
+        }
+        span:active {
+            background: rgb(153, 148, 231);
+            box-shadow: 0 3px rgb(124, 190, 211) inset;
+        }
+    }
+}
+
+.headerButton {
+    font-size: 16px;
+    padding: 8px;
+    span {
+        font-weight: 400;
+        color: white;
+        padding: 8px;
+        text-decoration: none;
+        border-radius: 3px;
+
+        transition: 0.2s;
+    }
+
+    span:hover {
+        cursor: pointer;
+    }
+}
+
+.groups {
+    display: flex;
+    &__body {
+        background-color: darkgrey;
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    &__title {
+        text-align: center;
+        color: white;
+        font-size: 18px;
+    }
+
+    span {
+        font-weight: 400;
+        color: white;
+        padding: 8px;
+        text-decoration: none;
+        border-radius: 3px;
+
+        transition: 0.2s;
+    }
+
+    span:hover {
+        cursor: pointer;
+    }
+
+    &__list {
+        border: black 1px solid;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        background-color: white;
+        //display: none;
+    }
+}
+
+.disableList {
+    display: none;
+}
+
+.list_el {
+    margin: 10px;
+    font-size: 16px;
+}
+
+.list_el:hover {
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: solid;
 }
 
 .schedule {
@@ -85,7 +182,7 @@ body {
         height: 100%;
         font-size: 14px;
         border: rgb(124, 124, 124) 1px solid;
-        margin-bottom: 5px;
+        margin-bottom: 1px;
         padding: 0px 4px 0px 4px;
     }
 }

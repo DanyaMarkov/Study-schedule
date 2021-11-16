@@ -39,7 +39,7 @@ body {
 }
 
 .header__input {
-  padding: 30px;
+  padding: 10px;
 }
 
 .header__inputtext {
@@ -62,8 +62,117 @@ body {
   text-align: center;
 }
 
-.header__showschedule {
-  font-size: 22px;
+.header__showAllGroups span {
+  background: #40c781;
+  -webkit-box-shadow: 0 -3px #35a76e inset;
+          box-shadow: 0 -3px #35a76e inset;
+}
+
+.header__showAllGroups span:hover {
+  background: #35a76e;
+}
+
+.header__showAllGroups span:active {
+  background: #21935a;
+  -webkit-box-shadow: 0 3px #21935a inset;
+          box-shadow: 0 3px #21935a inset;
+}
+
+.header__editSchedule span {
+  background: #626fe2;
+  -webkit-box-shadow: 0 -3px #ada9e6 inset;
+          box-shadow: 0 -3px #ada9e6 inset;
+}
+
+.header__editSchedule span:hover {
+  background: #ada9e6;
+}
+
+.header__editSchedule span:active {
+  background: #9994e7;
+  -webkit-box-shadow: 0 3px #7cbed3 inset;
+          box-shadow: 0 3px #7cbed3 inset;
+}
+
+.headerButton {
+  font-size: 16px;
+  padding: 8px;
+}
+
+.headerButton span {
+  font-weight: 400;
+  color: white;
+  padding: 8px;
+  text-decoration: none;
+  border-radius: 3px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.headerButton span:hover {
+  cursor: pointer;
+}
+
+.groups {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.groups__body {
+  background-color: darkgrey;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.groups__title {
+  text-align: center;
+  color: white;
+  font-size: 18px;
+}
+
+.groups span {
+  font-weight: 400;
+  color: white;
+  padding: 8px;
+  text-decoration: none;
+  border-radius: 3px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.groups span:hover {
+  cursor: pointer;
+}
+
+.groups__list {
+  border: black 1px solid;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  background-color: white;
+}
+
+.disableList {
+  display: none;
+}
+
+.list_el {
+  margin: 10px;
+  font-size: 16px;
+}
+
+.list_el:hover {
+  cursor: pointer;
+  font-weight: bold;
+  -webkit-text-decoration: solid;
+          text-decoration: solid;
 }
 
 .schedule__body {
@@ -95,7 +204,7 @@ body {
   height: 100%;
   font-size: 14px;
   border: #7c7c7c 1px solid;
-  margin-bottom: 5px;
+  margin-bottom: 1px;
   padding: 0px 4px 0px 4px;
 }
 

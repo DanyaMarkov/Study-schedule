@@ -4,11 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link rel="stylesheet" href="css/style.css">
-    
-
-
     <title>Document</title>
 </head>
 <body>
@@ -19,19 +15,27 @@
             </div>
 
             <div class="header__input">
-                <form action="">
-                    Для вывода расписания укажите в строке поиска номер учебной группы:
-                    <input class="header__inputtext" onchange="showSchedule(); Storage();" value="" type="text" name="" id="">
-                    <!-- <button class="header__inputbtn" onclick="showSchedule()"> Показать расписание </button> -->
-                    <!-- <a href="#" onclick="showSchedule()">Показать расписание</a> -->
-                </form>
-            </div>
+                
+                Для вывода расписания укажите в строке поиска номер учебной группы:
+                <input class="header__inputtext" onchange="showSchedule(); Storage();" value="" type="text" name="" id="">
 
-            <div class="header__showschedule">
-                Расписание занятий
+            </div>
+          
+
+            <div class="header__editSchedule headerButton">
+                <span href="" target="_blank">Редактировать расписание</span>
             </div>
         </div>
     </header>
+
+    <div class="groups">
+        <div class="groups__body container ">
+            <div class="groups__title" onclick="showAllGroups()">
+                <span>Список групп</span>
+            </div>
+            <div class="groups__list disableList"></div>
+        </div>
+    </div>
 
     <div class="schedule">
         <div class="schedule__body container">
